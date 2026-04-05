@@ -1,14 +1,22 @@
 {
-  "name": "khai-node-js-course",
+  "name": "nodejs-course",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node src/index.js",
+    "migration:generate": "drizzle-kit generate:pg --config=drizzle.config.js",
+    "migration:push": "drizzle-kit push:pg --config=drizzle.config.js"
   },
   "author": "dmytro afelchonok",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "4.18.2",
+    "drizzle-orm": "0.30.1",
+    "pg": "8.11.3"
+  },
+  "devDependencies": {
+    "drizzle-kit": "0.20.14"
   }
 }
